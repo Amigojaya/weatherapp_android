@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">weather_ganesh</string>
+    <string name="title_activity_main">weather_ganesh</string>
+    <string name="package_name">com.ganeshweather.com</string>
+    <string name="custom_url_scheme">com.ganeshweather.com</string>
+</resources>

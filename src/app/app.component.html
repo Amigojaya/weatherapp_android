@@ -1,3 +1,35 @@
+
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home" slot="start" [routerLink]="['/home']"></ion-icon>
+        <ion-menu-toggle>
+          <ion-label [routerLink]="['/home']">Home</ion-label>
+        </ion-menu-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="mail" slot="start" [routerLink]="['/about']"></ion-icon>
+        <ion-menu-toggle>
+          <ion-label [routerLink]="['/about']">About/settings</ion-label>
+        </ion-menu-toggle>
+      </ion-item>
+      <!-- <ion-item>
+        <ion-icon name="exit" slot="start" [routerLink]="['/about']"></ion-icon>
+        <ion-menu-toggle>
+          <ion-label [routerLink]="['/about']">Exit</ion-label>
+        </ion-menu-toggle>
+      </ion-item> -->
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
 <ion-app>
+  <ion-router-outlet id="menu-content"></ion-router-outlet>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>

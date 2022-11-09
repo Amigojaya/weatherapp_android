@@ -44,7 +44,7 @@ export class DetailPage implements OnInit {
           const toast = await this.toastController.create({
           message: this.city + ' Not a Valid city',
           duration: 2000,
-          color: 'tertiary',
+          color: 'danger',
           position: 'top',
         });
         await this.router.navigate(['/home']);
@@ -94,7 +94,7 @@ export class DetailPage implements OnInit {
     const toast = await this.toastController.create({
       message: city + ' added to Home page',
       duration: 2000,
-      color: 'tertiary',
+      color: 'danger',
       position
     });
     await toast.present();

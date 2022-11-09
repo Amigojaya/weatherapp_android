@@ -1,16 +1,14 @@
-<!--<ion-header [translucent]="true">-->
-<!--  <ion-toolbar>-->
-<!--    <ion-title>-->
-<!--      Blank-->
-<!--    </ion-title>-->
-<!--  </ion-toolbar>-->
-<!--</ion-header>-->
-
+<ion-header class="bar bar-subheader">
+  <ion-toolbar color="primary">
+     <ion-menu-button auto-hide="false" slot="start" id="main-content"></ion-menu-button>
+    <ion-title [routerLink]="['/home']">Weather App <ion-icon name="cloud" size="medium"></ion-icon></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-router-outlet id="menu-content"></ion-router-outlet>
 <ion-content >
   <ion-card color="primary" *ngFor="let cityDetail of cities" class="bckimage">
     <ion-card-header (click)="validateClick(cityDetail.name)">
       <ion-card-title class="textopa">{{cityDetail.name | titlecase}} {{cityDetail.celsius}} °C</ion-card-title>
-<!--      <ion-card-subtitle class="textopa">{{cityDetail.celsius}}</ion-card-subtitle>-->
     </ion-card-header>
 
     <ion-card-content class="textopa">

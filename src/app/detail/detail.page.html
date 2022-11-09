@@ -1,3 +1,11 @@
+<ion-header class="bar bar-subheader">
+  <ion-toolbar color="primary">
+    <ion-menu-button auto-hide="false" slot="start" id="main-content"></ion-menu-button>
+    <ion-title  [routerLink]="['/home']">Weather App <ion-icon name="cloud" size="medium"></ion-icon></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-router-outlet id="menu-content"></ion-router-outlet>
+
 <ion-content>
 <!--  <center><h1>Weather detail</h1></center>-->
   <div style="height: 200px">
@@ -6,9 +14,8 @@
       <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" class="feature-image" />
     </div>
     <ion-text color="light">
-      <center><h1 style="margin-top: 70px">{{city | titlecase}}</h1></center>
+      <h1 style="margin-top: 70px;align-content: center;">{{city | titlecase}}</h1>
     </ion-text>
-    <center><h1></h1></center>
   </div>
   <div style="margin-left: 10px;font-size: 18px">
     <div>Temprature - {{celsius}} °C</div>
@@ -20,13 +27,13 @@
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>
-      <ion-icon name="add" (click)="presentToast('top',city)"></ion-icon>
+      <ion-icon name="heart-circle" (click)="presentToast('top',city)"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
   <ion-fab vertical="bottom" horizontal="start" slot="fixed">
     <ion-fab-button>
-      <ion-icon name="arrow-up-circle" [routerLink]="['/home']"></ion-icon>
+      <ion-icon name="home" [routerLink]="['/home']"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>
